@@ -31,6 +31,7 @@ return {
             end
 
             lspconfig.tsserver.setup({
+                filetypes = { "javascript", "typescript", "vue" },
                 root_dir = function(fname)
                     -- If the project is a Deno project, do not start tsserver
                     if is_deno_project(fname) then

@@ -8,5 +8,12 @@ return {
   },
   config = function()
     vim.keymap.set('n', '<C-n>', ':Neotree toggle current reveal_force_cwd left<CR>', {})
+    require("neo-tree").setup({
+        filesystem = {
+            filtered_items = {
+                visible = true,
+            }
+        }
+    })
   end
 }

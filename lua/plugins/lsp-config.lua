@@ -14,6 +14,7 @@ return {
                     "tsserver",
                     "clangd",
                     "denols",
+                    "gopls",
                 }
             })
         end
@@ -64,6 +65,10 @@ return {
             })
 
             lspconfig.clangd.setup({
+                capabilities = capabilities
+            })
+
+            lspconfig.gopls.setup({
                 capabilities = capabilities
             })
 
